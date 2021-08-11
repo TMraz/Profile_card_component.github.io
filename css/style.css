@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
 
 :root {
-    --color-font: 0, 0%, 11%;
-    --color-main-background: 187, 50%, 51%;
-    --color-card-background: 0, 0%, 59%;
-    --color-border: 0, 0%, 100%;
-    --color-horizontal-line: 0, 0%, 94%;
-    --color-font-lighter: 0, 0%, 80%;
+    --color-font: hsl(0, 0%, 11%);
+    --color-main-background: hsl(187, 50%, 51%);
+    --color-card-background: hsl(0, 0%, 59%);
+    --color-border: hsl(0, 0%, 100%);
+    --color-horizontal-line: hsl(0, 0%, 94%);
+    --color-font-lighter: hsl(0, 0%, 80%);
 }
 
 /* * {outline: 1px dotted red;} */
@@ -23,7 +23,7 @@ html,
 body {
     font-size: 100%;
     font-family: "Kumbh Sans", sans-serif;
-    color: hsl(var(--color-font));  
+    color: var(--color-font);  
 
 }
 
@@ -34,7 +34,7 @@ body {
     justify-content: center;
     align-items: center;
 
-    background-color: hsl(var(--color-main-background));
+    background-color: var(--color-main-background);
 
     background-image: url(../img/bg-pattern-top.png), url(../img/bg-pattern-bottom.png);
     background-size: 80em, 80em;
@@ -46,7 +46,7 @@ body {
     width: 310px;
     height: 330px;
 
-    background: hsl(var(--color-border));
+    background: var(--color-border);
     border-radius: 1em;
 
     box-shadow: 0 14px 28px hsl(185deg 90% 18% / 31%),
@@ -71,7 +71,7 @@ img {
     left: calc(50% - 50px);
 
     border-radius: 50%;
-    border: .3em solid hsl(var(--color-border));
+    border: .3em solid var(--color-border);
 }
 
 article {
@@ -88,7 +88,7 @@ h1 {
 span {
     font-weight: 200;
     font-size: .9em;
-    color: hsl(var(--color-card-background));
+    color: var(--color-card-background);
 }
 
 hr {
@@ -96,13 +96,13 @@ hr {
     border: 0ch;
     margin: 0 1em;
     height: 1px;
-    background: hsl(var(--color-horizontal-line));
+    background: var(--color-horizontal-line);
 }
 
 .list {
     margin: 1.3em .5em;
     list-style-type: none;
-    padding-left: none;
+    padding-left: 0;
 }
 
 li {
@@ -113,8 +113,8 @@ li {
 
 /* === FOOTER === */
 footer { position: absolute; bottom: 1rem; right: 2rem;}
-.attribution { font-size: 8px; text-align: center; color: hsl(var(--color-font-lighter))}
-.attribution a { color: hsl(var(--color-font-lighter)); }
+.attribution { font-size: 8px; text-align: center; color: var(--color-font-lighter)}
+.attribution a { color: var(--color-font-lighter); }
 
 /* === MEDIA QUERRIES === */
 @media screen and (max-width: 1440px) {
