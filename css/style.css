@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+:root {
+    --color-font: 0, 0%, 11%;
+    --color-main-background: 187, 50%, 51%;
+    --color-card-background: 0, 0%, 59%;
+    --color-border: 0, 0%, 100%;
+    --color-horizontal-line: 0, 0%, 94%;
+    --color-font-lighter: 0, 0%, 80%;
+}
+
+/* * {outline: 1px dotted red;} */
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+    font-size: 100%;
+    font-family: "Kumbh Sans", sans-serif;
+    color: hsl(var(--color-font));  
+
+}
+
+body {
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: hsl(var(--color-main-background));
+
+    background-image: url(../img/bg-pattern-top.png), url(../img/bg-pattern-bottom.png);
+    background-size: 80em, 80em;
+    background-repeat: no-repeat, no-repeat;
+    background-position: left -20em top -50em, right -20em bottom -50em;
+}
+
+.card {
+    width: 310px;
+    height: 330px;
+
+    background: hsl(var(--color-border));
+    border-radius: 1em;
+
+    box-shadow: 0 14px 28px hsl(185deg 90% 18% / 31%),
+    0 10px 10px rgb(25 162 174 / 19%);
+}
+
+header {
+    width: inherit;
+    height: 50%; 
+    
+    position: relative;
+}
+.card-banner {
+    height: 7em;
+    background-image: url(../img/bg-pattern-card.svg);
+    border-radius: 1em 1em 0 0;
+}
+
+img {
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 50px);
+
+    border-radius: 50%;
+    border: .3em solid hsl(var(--color-border));
+}
+
+article {
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: .5em;
+    padding-bottom: 0;
+    font-size: 1.3em;
+    line-height: 1.5em;
+}
+
+span {
+    font-weight: 200;
+    font-size: .9em;
+    color: hsl(var(--color-card-background));
+}
+
+hr {
+    display: block;
+    border: 0ch;
+    margin: 0 1em;
+    height: 1px;
+    background: hsl(var(--color-horizontal-line));
+}
+
+.list {
+    margin: 1.3em .5em;
+    list-style-type: none;
+    padding-left: none;
+}
+
+li {
+    font-weight: bold;
+    display: inline-block;
+    width: 32%;
+}
+
+/* === FOOTER === */
+footer { position: absolute; bottom: 1rem; right: 2rem;}
+.attribution { font-size: 8px; text-align: center; color: hsl(var(--color-font-lighter))}
+.attribution a { color: hsl(var(--color-font-lighter)); }
+
+/* === MEDIA QUERRIES === */
+@media screen and (max-width: 1440px) {
+    body {
+        background-size: 50em, 50em;
+        background-repeat: no-repeat, no-repeat;
+        background-position: left -20em top -30em, right -20em bottom -30em;    
+    }
+}
+
